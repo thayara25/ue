@@ -1,8 +1,8 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/"
+    "/content/wknd1-wknd1/:/"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/wknd1-wknd1/"
   ]
 }
