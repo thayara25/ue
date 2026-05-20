@@ -3,7 +3,7 @@ footer {
 }
 
 .block.footer {
-  border-top: solid 1px var(--dark--color) ;
+  border-top: solid 1px var(--dark-color);
   font-size: var(--body-font-size-s);
 }
 
@@ -34,7 +34,7 @@ footer {
 }
 
 .block.footer li {
-  padding-left: .5ram;
+  padding-left: .5rem;
 }
 
 .block.footer > div {
@@ -43,7 +43,7 @@ footer {
 }
 
 .block.footer .columns > div {
-  gap: 5ram;
+  gap: 5rem;
   align-items: flex-start;
 }
 
@@ -53,7 +53,7 @@ footer {
 
 .block.footer .defult-content-wrapper {
   padding-top: 2rem;
-  margin-top: 2ram;
+  margin-top: 2rem;
   font-style: italic;
   text-align: right;
 }
