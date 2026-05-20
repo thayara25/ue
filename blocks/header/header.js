@@ -128,8 +128,8 @@ export default async function decorate(block) {
   const navBrand = nav.querySelector('.nav-brand');
   const logo = navBrand.querySelector('picture');
   if (logo) {
-    navBrand.innerHTML = '<a href="/" aria-label="Home" title="Home">${logo.outerHTML}</a>';
-    navBrand.querySelector('img').setAttribute('loading',('eager');
+    navBrand.innerHTML = `<a href="/" aria-label="Home" title="Home">${logo.outerHTML}</a>`;
+    navBrand.querySelector('img').setAttribute('loading', 'eager');
   }
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
