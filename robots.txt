@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://main--ue--thayara25.aem.live/sitemap.xml
