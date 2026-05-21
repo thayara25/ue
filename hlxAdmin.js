@@ -1,11 +1,11 @@
-// Make sure to run these commands in the terminal:
-// npm install --save-dev dotenv axios
-//
-// Add in .env file with the content:
-// AEM_AUTH_TOKEN=your-auth-token
-//
+/* eslint-disable no-console */
+
+// Make sure to run this commands in the terminal:
+// npm install dotenv axios --save
+// add a .env file with the content: AEM_AUTH_TOKEN=your-auth-token
 // Add npm scripts in package.json:
 // "clear-cache": "node hlxAdmin.js cache"
+// "reindex": "node hlxAdmin.js reindex"
 
 require('dotenv').config();
 const axios = require('axios');
