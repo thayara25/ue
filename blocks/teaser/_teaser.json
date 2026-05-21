@@ -48,7 +48,7 @@
                     "label": "CTA",
                     "valueType": "string",
                     "validation": {
-                      "rootPath": "/content/wknd-xwalk"
+                      "rootPath": "/content/wknd1-xwalk1"
                     }
                 },
                 {
