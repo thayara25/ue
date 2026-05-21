@@ -17,7 +17,7 @@
   --background-color: white; /* Background color */
   --light-color: rgb(235 235 235); /* Light Background color */
   --dark-color: var(--secondary-color); /* Dark text color */
-  --text-color: var(--secondary-color); /* Default text color */
+  --text-color: #3b63fb; /* Default text color */
   --link-color: var(--text-color); /* Link color */
   --link-hover-color: black; /* Base hover color */
 
