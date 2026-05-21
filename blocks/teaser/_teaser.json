@@ -1,0 +1,25 @@
+{
+    "definitions":[
+    {
+    "title": "Teaser",
+    "id": "teaser",
+    "plugins": {
+        "xwalk": {
+            "page": {
+                "resourceType":"core/frankklin/components/blok/v1/block",
+                "template": {
+                    "name": "Teaser",
+                    "model": "teaser"
+                }
+            }
+        }
+    }
+    }],
+    "models": [
+        {
+            "id": "teaser",
+            "fields": []
+        }
+    ],
+    "filters":[]
+}
