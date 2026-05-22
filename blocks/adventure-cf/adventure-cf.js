@@ -33,10 +33,21 @@ function createDisplay(contentFragment) {
   const { data } = contentFragment;
 
   let innerHTML = '';
+  // eslint-disable-next-line no-underscore-dangle
+  const cfPath = data._path;
 
+  // data-aue-resource
+  //    Connects to the source content fragment for editing capabilities in the Universal Editor
+  // data-aue-type
+  //    Tells the Universal Editor this is a reference item
+  // data-aue-label
+  //    Title of the phantom reference item under the block in the Universal Editor Content Tree
   innerHTML
   += `<div class="headless-wrapper">
-    <div class="content-fragment-detail">`;
+    <div class="content-fragment-detail"
+        data-aue-resource="urn:aemconnection:${cfPath}/jcr:content/data/master" 
+        data-aue-type="reference" 
+        data-aue-label="${data[keys.title]}">`;
   // eslint-disable-next-line no-underscore-dangle
   const cfPrimaryImagePath = data[keys.primaryImage]._path;
   innerHTML
@@ -44,11 +55,11 @@ function createDisplay(contentFragment) {
             <div class="content-fragment-image">
                 <picture>
                     <source srcset="${getAEMHost()}${cfPrimaryImagePath}?width=1200&format=webply&optimize=medium" type="image/webp">
-                    <img src="${getAEMHost()}${cfPrimaryImagePath}?width=1200&format=webply&optimize=medium" alt="${data[keys.title]}" loading="lazy" >
+                    <img src="${getAEMHost()}${cfPrimaryImagePath}?width=1200&format=webply&optimize=medium" alt="${data[keys.title]}" loading="lazy">
                 </picture>
             </div>
             <div class="content-fragment-${keys.title}-overlay">
-                <h1 class="content-fragment-${keys.title}" ">${data[keys.title]}</h1>
+                <h1 class="content-fragment-${keys.title}">${data[keys.title]}</h1>
             </div>
         </div>
         <div class="content-fragment-content">
@@ -104,13 +115,13 @@ export default async function decorate(block) {
     }
 
     /*
-      Because the content fragment is a reference property,
-        we can rewrite the entire block with the content fragment data
-      Caution with doing this with default content and inferred elements
-        since UE it renders the block with special aue attributes
-      Learn more about inferred elements here:
-        https://www.aem.live/developer/component-model-definitions#creating-semantic-content-models-for-blocks
-      */
+    Because the content fragment is a reference property,
+      we can rewrite the entire block with the content fragment data
+    Caution with doing this with default content and inferred elements
+      since UE it renders the block with special aue attributes
+    Learn more about inferred elements here:
+      https://www.aem.live/developer/component-model-definitions#creating-semantic-content-models-for-blocks
+    */
     block.innerHTML = createDisplay(contentFragment);
   } catch (error) {
     // eslint-disable-next-line no-console
